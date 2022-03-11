@@ -22,13 +22,29 @@ interface Developer {
 
 interface Person {
   name: string;
-  age: string;
+  age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
+// function askSomeone(someone: Developer | Person) {
+//   someone.name;
+//   someone.skill;
+//   someone.age;
+// }
+
+// askSomeone({ name: "바미", skill: "TS" });
+// askSomeone({ name: "바미", age: 13 });
+
+// Intersection Type
+
+// var bami : string & number & boolean
+
+function askSomebody(someone: Developer & Person) {
   someone.name;
   someone.skill;
   someone.age;
 }
 
-// Intersection Type
+askSomebody({ name: "바미", age: 13 });
+askSomebody({ name: "바미", skill: "TS" });
+
+askSomebody({ name: "바미", skill: "TS", age: 13 });
