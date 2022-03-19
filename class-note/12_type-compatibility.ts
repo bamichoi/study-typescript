@@ -4,12 +4,11 @@ interface Engineer {
   skill: string;
 }
 
-interface Someone {
-  name: string;
-}
+// interface Someone {
+//   name: string;
+// }
 
 let engineer: Engineer;
-
 let someone: Someone;
 
 engineer = someone; // 타입 Someone은 타입 Developer의 부분집합, 합집합이 되어야 할당할 수 있다.
@@ -21,22 +20,22 @@ class Someone {
   name: string;
 }
 
-engineer = new Someone(); // Type 'Someone' is not assignable to type 'Engineer'.
+engineer = new Someone(); /
 
 // 타입 이름이 아니라 내부의 구조를 비교를 한다. class로 비교하더라도 같은 결과
 
 // 함수
 
-var add = function (a: number) {
-  console.log(a);
+var add = function (c: number) {
+  return c
 };
 
 var sum = function (a: number, b: number) {
-  console.log(a + b);
+  return a+b
 };
 
 add = sum; // Type '(a: number, b: number) => number' is not assignable to type '(a: number) => void'.
-sum = add; // sum의 구조는 add의 구조의 합집합.
+sum = add; //
 
 //제네릭
 
